@@ -1,17 +1,17 @@
 {
-    "search-settings": {
-        "product-name": "S2_MSI_L2A_MAJA", 
-        "init-time": "2021-03-01", 
-        "end-time": "2021-03-31", 
+    "search_settings": {
+        "product_name": "S2_MSI_L2A_MAJA", 
+        "init_time": "2021-03-01", 
+        "end_time": "2021-03-31", 
         "geometry": {
             "lonmin": 1, "latmin": 43, 
             "lonmax": 2, "latmax": 44
             }
     }, 
-    "saving-settings": {
-        "base-path": "./data", 
+    "saving_settings": {
+        "base_path": "./data", 
         "ext": "png", 
-        "config-path": "./eodag-config" 
+        "config_path": "./eodag-config" 
     }, 
     "providers": {
         "theia": {

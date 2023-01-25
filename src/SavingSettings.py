@@ -5,13 +5,13 @@ class SavingSettings():
     
     :param settings: A dictionary containing saving settings. It must be made like this: 
     {
-        "base-path": this is the path where to save downloaded data. It must be relative to the project folder. 
+        "base_path": this is the path where to save downloaded data. It must be relative to the project folder. 
         Default: <project_dir>/data
          
         "ext": The extension of the downloaded images (usually should be leave to png)
         Default: png 
         
-        "config-path": this is the path where to save configurations data. It must be relative to the project folder 
+        "config_path": this is the path where to save configurations data. It must be relative to the project folder 
         Default: <project_dir>/eodag-config
     }
     :type settings: dict
@@ -19,7 +19,7 @@ class SavingSettings():
     def __init__(self, settings: dict) -> None:
         present_file_path = YamlUtilities.get_present_file_path()
         
-        config_base_path = settings.get('base-path', "")
+        config_base_path = settings.get('base_path', "")
         if config_base_path == "":
             config_base_path = "./data"
         self._base_path = f"{present_file_path}/../{config_base_path}"
@@ -29,7 +29,7 @@ class SavingSettings():
             config_file_ext = "png"
         self._ext = config_file_ext
 
-        config_config_path = settings.get('config-path', "")
+        config_config_path = settings.get('config_path', "")
         if config_config_path == "":
             config_config_path = "./eodag-config"
         self._config_path = f"{present_file_path}/../{config_config_path}"

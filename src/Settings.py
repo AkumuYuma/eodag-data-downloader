@@ -31,8 +31,8 @@ class Settings():
         else: 
             raise TypeError("Settings type must be string or dict")
 
-        self.searchSettings = SearchSettings(dict_settings["search-settings"])
-        self.savingSettings = SavingSettings(dict_settings["saving-settings"])
+        self.searchSettings = SearchSettings(dict_settings["search_settings"])
+        self.savingSettings = SavingSettings(dict_settings["saving_settings"])
         self.providers = ProviderList(dict_settings["providers"])
         self.config_file_path = f"{self.savingSettings.config_path}/eodag.yml"
 
