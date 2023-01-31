@@ -15,7 +15,8 @@ if __name__=="__main__":
         print(usage_string)
         exit(1)
     
-    eodagPlugin = EodagPlugin(Settings(sys.argv[1])) 
+    cleaned_settings = sys.argv[1].replace("\'","\"")
+    eodagPlugin = EodagPlugin(Settings(cleaned_settings)) 
     search_results = eodagPlugin.search_with_current_settings()
     for product in search_results: 
         eodagPlugin.download_product(product)
